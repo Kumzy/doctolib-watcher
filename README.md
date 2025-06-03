@@ -7,10 +7,9 @@ A Python script that monitors Doctolib for available appointments and sends noti
 - 🔍 **Monitors multiple doctors/agendas** simultaneously
 - 📅 **Configurable date range** for appointment checking
 - 🚫 **No duplicate notifications** - uses SQLite to track sent notifications
-- 🤖 **Anti-bot detection** with realistic browser headers and random delays
-- 💬 **Discord notifications** with rich embeds
+- 💬 **Discord notifications**
 - 🧹 **Automatic cleanup** of old notification records
-- ⚙️ **Easy configuration** with separate files for doctors and settings
+- ⚙️ **Easy configuration**
 
 ## Setup
 
@@ -70,7 +69,7 @@ DOCTORS = [
 3. **Open browser developer tools** (F12)
 4. **Go to Network tab**, filter on ``XHR`` and look for requests to `availabilities.json`
 5. **Copy the full URL** from the network request
-6. **Add it to your `doctors.py` file and replace www by partners**, it should look like this:
+6. **Add it to your `doctors.py` file** and replace ``www`` by ``partners``, it should look like this:
    ```
    https://partners.doctolib.fr/availabilities.json?visit_motive_ids=123456&agenda_ids=789012&practice_ids=345678&telehealth=false&start_date=2025-06-02&limit=15
    ```
@@ -124,13 +123,6 @@ DOCTORS = [
     },
 ]
 ```
-
-### Logs
-
-The script provides detailed logging:
-- **INFO**: Normal operations and found slots
-- **WARNING**: Configuration issues or failed requests
-- **ERROR**: Serious problems that need attention
 
 ## Requirements
 
